@@ -10,9 +10,11 @@
 		    
 		    foreach( $this->app['config.factory']->get('shortcodes.shortcodes') as $tag => $shortcode ) {
 			    
-			    add_shortcode( $tag, function($atts) use($shortcode) {
+			    $shortcode = new $shortcode;
+			    
+			    add_shortcode( $shortcode->tag, function($atts) use($shortcode) {
 		     
-			    	$this->app->call( [new $shortcode, 'render'], compact( 'atts' ) );
+			    	$this->app->call( [$shortcode, 'render'], compact( 'atts' ) );
 			        
 			    } );
 			    
