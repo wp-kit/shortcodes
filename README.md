@@ -72,16 +72,16 @@ class Test extends Shortcode {
         'message' => 'Hey!'
     ];
     
-    public function render( $atts = array(), $content = '' ) {
+    	public function render( $atts = array(), $content = '' ) {
     		
 		$atts = $this->filterAtts( shortcode_atts( $this->getDefaultAtts(), $atts, $this->base ) );
-		
+
 		if( $content ) {
-    		
-    		$atts['content'] = wpautop( do_shortcode($content) );
-    		
+
+		$atts['content'] = wpautop( do_shortcode($content) );
+
 		}
-		
+
 		return view('shortcodes' . DS . $this->getFilename(), $atts);
 		
 	}
@@ -94,7 +94,7 @@ class Test extends Shortcode {
 	
 	protected function filterAtts( $atts = array() ) {
 
-    	$atts['icon'] = get_stylesheet_directory_uri() . '/images/' . $atts['icon']
+    		$atts['icon'] = get_stylesheet_directory_uri() . '/images/' . $atts['icon']
 		
 		return $atts;
 		
@@ -102,13 +102,13 @@ class Test extends Shortcode {
 		
 	protected function getDefaultAtts() {
 
-	    if( is_user_logged_in() ) {
-	    
-		global $current_user;
-		
-		$this->atts['message'] = 'Hey ' . $current_user->first_name;
-	      
-	    }
+		if( is_user_logged_in() ) {
+
+			global $current_user;
+	
+			$this->atts['message'] = 'Hey ' . $current_user->first_name;
+
+		}
 		
 		return $this->atts;
 		
