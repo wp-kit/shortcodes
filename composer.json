@@ -1,0 +1,36 @@
+{
+	"name": "wp-kit/shortcodes",
+	"description": "A Wordpress PHP Component that handles Shortcdoes",
+	"keywords": ["wordpress", "themosis", "oop", "shortcodes"],
+	"homepage" : "https://github.com/wp-kit/shortcodes",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Creative Little Dots",
+			"email" : "tech@creativelittledots.co.uk",
+			"homepage" : "https://creativelittledots.co.uk/",
+			"role" : "Developers"
+		}
+	],
+	"require": {
+        "php": ">=5.6.4",
+        "wp-kit/integrations": "dev-master",
+        "illuminate/view": "5.*"
+    },
+	"type": "library",
+	"autoload": {
+        "psr-4": {
+            "WPKit\\Shortcodes\\": "src/Shortcodes" 
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+		"preferred-install": "dist"
+	},
+	"repositories": [
+	],
+	"scripts": {
+	}
+}
