@@ -74,45 +74,45 @@ class Test extends Shortcode {
     
     public function render( $atts = array(), $content = '' ) {
     		
-    		$atts = $this->filterAtts( shortcode_atts( $this->getDefaultAtts(), $atts, $this->base ) );
+		$atts = $this->filterAtts( shortcode_atts( $this->getDefaultAtts(), $atts, $this->base ) );
+		
+		if( $content ) {
     		
-    		if( $content ) {
-        		
-        		$atts['content'] = wpautop( do_shortcode($content) );
-        		
-    		}
-    		
-    		return view('shortcodes' . DS . $this->getFilename(), $atts);
+    		$atts['content'] = wpautop( do_shortcode($content) );
     		
 		}
 		
-		protected function getFilename() {
-    		
-    		return 'tests' . DS . $this->tag;
-    		
-		}
+		return view('shortcodes' . DS . $this->getFilename(), $atts);
 		
-		protected function filterAtts( $atts = array() ) {
-    
-        $atts['icon'] = get_stylesheet_directory_uri() . '/images/' . $atts['icon']
-    		
-    		return $atts;
-    		
-		}
+	}
 		
-		protected function getDefaultAtts() {
-    
-        if( is_user_logged_in() ) {
-        
-          global $current_user;
-        
-          $this->atts['message'] = 'Hey ' . $current_user->first_name;
-          
-        }
-    		
-    		return $this->atts;
-    		
-		}
+	protected function getFilename() {
+		
+		return 'tests' . DS . $this->tag;
+		
+	}
+	
+	protected function filterAtts( $atts = array() ) {
+
+    	$atts['icon'] = get_stylesheet_directory_uri() . '/images/' . $atts['icon']
+		
+		return $atts;
+		
+	}
+		
+	protected function getDefaultAtts() {
+
+	    if( is_user_logged_in() ) {
+	    
+		global $current_user;
+		
+		$this->atts['message'] = 'Hey ' . $current_user->first_name;
+	      
+	    }
+		
+		return $this->atts;
+		
+	}
     
 }
 
@@ -121,9 +121,9 @@ class Test extends Shortcode {
 
 ## Config
 
-```php
-
 If you are using Themosis add the following to resources/config/shortcodes.config.php, if you are not then load this configuration into you Container within config.shortcodes.
+
+```php
 
 return [
 
