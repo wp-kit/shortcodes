@@ -24,7 +24,7 @@ Just register the service provider and facade in the providers config and theme 
 //inside themosis-theme/resources/config/providers.config.php
 
 return [
-    WPKit\Shortcodes\ShortcodesServiceProvider::class
+    WPKit\Shortcodes\ShortcodeServiceProvider::class
 ];
 ```
 
@@ -47,7 +47,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 $container = new Illuminate\Container\Container(); // create new app container
 
-$provider = new WPKit\Shortcodes\ShortcodesServiceProvider($container); // inject into service provider
+$provider = new WPKit\Shortcodes\ShortcodeServiceProvider($container); // inject into service provider
 
 $provider->register(); //register service provider
 ```
