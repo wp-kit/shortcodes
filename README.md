@@ -65,12 +65,12 @@ use WPKit\Shortcodes\Shortcode;
 
 class Test extends Shortcode {
 
-    var $tag = 'test';
-    var $atts = [
-        'text' => 'foo',
-        'icon' => 'icon.png',
-        'message' => 'Hey!'
-    ];
+	var $tag = 'test';
+	var $atts = [
+		'text' => 'foo',
+		'icon' => 'icon.png',
+		'message' => 'Hey!'
+	];
     
     	public function render( $atts = array(), $content = '' ) {
     		
