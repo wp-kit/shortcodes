@@ -9,7 +9,7 @@
 		
 		public function render( $atts = array(), $content = '' ) {
     		
-    		$atts = $this->filterAtts( shortcode_atts( $this->getDefaultAtts(), $atts, $this->base ) );
+    		$atts = $this->filterAtts( shortcode_atts( $this->getDefaultAtts(), $atts, $this->tag ) );
     		
     		if( $content ) {
         		
