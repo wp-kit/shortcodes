@@ -14,7 +14,9 @@ If you're using Themosis, install via composer in the Themosis route folder, oth
 composer require "wp-kit/shortcodes"
 ```
 
-## Registering Service Provider
+## Setup
+
+### Adding Service Provider
 
 **Within Themosis Theme**
 
@@ -52,6 +54,13 @@ $provider = new WPKit\Shortcodes\ShortcodeServiceProvider($container); // inject
 $provider->register(); //register service provider
 ```
 
+### Adding PRS4 Class Reference (Themosis Only)
+
+Just add the following line to ```resources/config/loading.config.php``` in the themosis them folder:
+
+```php
+'Theme\\Shortcodes\\' => themosis_path('theme.resources').'shortcodes',
+```
 
 ## Using Shortcode Class
 
