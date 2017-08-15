@@ -62,6 +62,22 @@ Just add the following line to ```resources/config/loading.config.php``` in the 
 'Theme\\Shortcodes\\' => themosis_path('theme.resources').'shortcodes',
 ```
 
+### Config
+
+The recommended method of installing config files for WPKit Components is via ```wp-kit/vendor-publish``` command.
+
+First, [install WP CLI](http://wp-cli.org/), and then install the package via:
+
+```wp package install wp-kit/vendor-publish```
+
+Once installed you can run:
+
+```wp kit vendor:publish```
+
+For more information, please visit [wp-kit/vendor-publish](https://github.com/wp-kit/vendor-publish).
+
+Alternatively, you can place the [config file(s)](config) in your ```theme/resources/config``` directory manually.
+
 ## Usage
 
 WPKit Shortcodes comes with an extendable class as shown below:
@@ -127,22 +143,6 @@ class Test extends Shortcode {
 
 
 ```
-
-## Config
-
-The recommended method of installing config files for WPKit Components is via ```wp-kit/vendor-publish``` command.
-
-First, [install WP CLI](http://wp-cli.org/), and then install the package via:
-
-```wp package install wp-kit/vendor-publish```
-
-Once installed you can run:
-
-```wp kit vendor:publish```
-
-For more information, please visit [wp-kit/vendor-publish](https://github.com/wp-kit/vendor-publish).
-
-Alternatively, you can place the [config file(s)](config) in your ```theme/resources/config``` directory manually.
 
 ## Requirements
 
