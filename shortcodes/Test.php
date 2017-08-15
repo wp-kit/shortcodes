@@ -35,7 +35,7 @@
 		
 		protected function filterAtts( $atts = array() ) {
 	
-	    		$atts['icon'] = get_stylesheet_directory_uri() . '/images/' . $atts['icon']
+	    		$atts['icon'] = get_stylesheet_directory_uri() . '/images/' . $atts['icon'];
 			
 			return $atts;
 			
