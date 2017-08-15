@@ -20,9 +20,9 @@
 	    }
 	}
 	
-	if( ! function_exists( 'shortcodes_path' ) ) {
+	if( ! function_exists( 'shortcode_path' ) ) {
 		
-		function shortcodes_path( $file = '' ) {
+		function shortcode_path( $file = '' ) {
 			
 		    if( function_exists('themosis_path') ) {
 			    $path = themosis_path('theme.resources') . DS . 'shortcodes';

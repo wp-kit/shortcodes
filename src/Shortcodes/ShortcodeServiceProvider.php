@@ -18,8 +18,12 @@
 			], 'config');
 			
 			$this->publishes([
-				__DIR__.'/../../shortcodes/Test.php' => shortcodes_path('Test.php')
+				__DIR__.'/../../shortcodes/Test.php' => shortcode_path('Test.php')
 			], 'shortcodes');
+			
+			$this->publishes([
+				__DIR__.'/../../views/shortcodes/tests/test.twig' => view_path('shortcodes/tests/test.twig')
+			], 'views');
 			
 		}
 		
