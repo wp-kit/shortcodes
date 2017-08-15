@@ -62,7 +62,7 @@ Just add the following line to ```resources/config/loading.config.php``` in the 
 'Theme\\Shortcodes\\' => themosis_path('theme.resources').'shortcodes',
 ```
 
-### Add Config File
+### Add Config & View File
 
 The recommended method of installing config files for WPKit Components is via ```wp-kit/vendor-publish``` command.
 
@@ -76,13 +76,21 @@ Once installed you can run:
 
 For more information, please visit [wp-kit/vendor-publish](https://github.com/wp-kit/vendor-publish).
 
-Alternatively, you can place the [config file(s)](config) in your ```theme/resources/config``` directory manually.
+Alternatively, you can place the [config file(s)](config), [shortcode file(s)](shortcodes) and [view file(s)](views) in your ```theme/resources/config```, ```theme/resources/shortcodes``` and ```theme/resources/views``` directories manually.
 
 ## Usage
+
+### Adding Classes
 
 ```wp-kit\shortcodes``` comes with a class [```WPKit\Shortcodes\Shortcode```](src/Shortcodes/Shortcode.php) which can be extended by your own shortcode classes which should be added inside ```resources/shortcodes``` within the namespace ```Theme\Shortcodes```. 
 
 [Here is an example shortcode class](shortcodes/Test.php).
+
+### Adding Views
+
+When you add a class, be sure to add a template view file within ```resources\views\shortcodes``` with the same name as the ```$tag``` you have set in the shortcode class.
+
+You may use whatever either ```twig``` or ```php``` file types. We always recommend [```twig```](https://twig.symfony.com/).
 
 ## Requirements
 
