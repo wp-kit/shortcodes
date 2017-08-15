@@ -12,20 +12,6 @@
 			'icon' => 'icon.png',
 			'message' => 'Hey!'
 		];
-	    
-	    public function render( $atts = array(), $content = '' ) {
-	    		
-			$atts = $this->filterAtts( shortcode_atts( $this->getDefaultAtts(), $atts, $this->base ) );
-	
-			if( $content ) {
-	
-			$atts['content'] = wpautop( do_shortcode($content) );
-	
-			}
-	
-			return view('shortcodes' . DS . $this->getFilename(), $atts);
-			
-		}
 			
 		protected function getFilename() {
 			
@@ -35,7 +21,7 @@
 		
 		protected function filterAtts( $atts = array() ) {
 	
-	    		$atts['icon'] = get_stylesheet_directory_uri() . '/images/' . $atts['icon'];
+	    	$atts['icon'] = get_stylesheet_directory_uri() . '/images/' . $atts['icon'];
 			
 			return $atts;
 			
