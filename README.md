@@ -16,7 +16,7 @@ composer require "wp-kit/shortcodes"
 
 ## Setup
 
-### Adding Service Provider
+### Add Service Provider
 
 **Within Themosis Theme**
 
@@ -54,7 +54,7 @@ $provider = new WPKit\Shortcodes\ShortcodeServiceProvider($container); // inject
 $provider->register(); //register service provider
 ```
 
-### Adding PRS4 Class Reference (Themosis Only)
+### Add PRS4 Class Reference (Themosis Only)
 
 Just add the following line to ```resources/config/loading.config.php``` in the themosis them folder:
 
