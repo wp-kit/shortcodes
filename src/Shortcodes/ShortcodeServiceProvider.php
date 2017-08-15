@@ -31,7 +31,7 @@
 			    
 			    add_shortcode( $shortcode->tag, function($atts) use($shortcode) {
 		     
-			    	$this->app->call( [$shortcode, 'render'], compact( 'atts' ) );
+			    	return $this->app->call( [$shortcode, 'render'], compact( 'atts' ) );
 			        
 			    } );
 			    
