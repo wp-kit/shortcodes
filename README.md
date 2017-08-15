@@ -92,6 +92,8 @@ When you add a class, be sure to add a template view file within ```resources\vi
 
 You may use whatever either ```twig``` or ```php``` file types. We always recommend [```twig```](https://twig.symfony.com/).
 
+[Here is an example view files](views/shortcodes/tests/test.twig).
+
 ## Requirements
 
 Wordpress 4+
