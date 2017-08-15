@@ -2,9 +2,9 @@
 	
 	namespace WPKit\Shortcodes;
 	
-	use WPKit\Integrations\IntegrationServiceProvider;
+	use WPKit\Integrations\Integration;
 	
-	class ShortcodeServiceProvider extends IntegrationServiceProvider {
+	class ShortcodeServiceProvider extends Integration {
 		
 	    public function startIntegration() {
 		    
