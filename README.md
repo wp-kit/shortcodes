@@ -62,7 +62,7 @@ Just add the following line to ```resources/config/loading.config.php``` in the 
 'Theme\\Shortcodes\\' => themosis_path('theme.resources').'shortcodes',
 ```
 
-## Using Shortcode Class
+## Usage
 
 WPKit Shortcodes comes with an extendable class as shown below:
 
