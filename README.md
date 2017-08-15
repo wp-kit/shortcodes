@@ -121,28 +121,19 @@ class Test extends Shortcode {
 
 ## Config
 
-If you are using Themosis add the following to resources/config/shortcodes.config.php, if you are not then load this configuration into you Container within config.shortcodes.
+The recommended method of installing config files for WPKit Components is via ```wp-kit/vendor-publish``` command.
 
-```php
+First, [install WP CLI](http://wp-cli.org/), and then install the package via:
 
-return [
+```wp package install wp-kit/vendor-publish```
 
-    /*
-    |--------------------------------------------------------------------------
-    | Shortcodes
-    |--------------------------------------------------------------------------
-    |
-    | Tell the Service Provider which Shortcodes to instantiate
-    |
-    */
+Once installed you can run:
 
-    'shortcodes' => [
-        App\Shortcodes\Test::class
-    ]
-     
-];
+```wp kit vendor:publish```
 
-```
+For more information, please visit [wp-kit/vendor-publish](https://github.com/wp-kit/vendor-publish).
+
+Alternatively, you can place the [config file(s)](config) in your ```theme/resources/config``` directory manually.
 
 ## Requirements
 
