@@ -62,7 +62,7 @@ Just add the following line to ```resources/config/loading.config.php``` in the 
 'Theme\\Shortcodes\\' => themosis_path('theme.resources').'shortcodes',
 ```
 
-### Config
+### Add Config File
 
 The recommended method of installing config files for WPKit Components is via ```wp-kit/vendor-publish``` command.
 
