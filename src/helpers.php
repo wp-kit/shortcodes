@@ -25,11 +25,11 @@
 		function shortcodes_path( $file = '' ) {
 			
 		    if( function_exists('themosis_path') ) {
-			    $root = themosis_path('theme.resources');
+			    $path = themosis_path('theme.resources') . DS . 'shortcodes';
 		    } else {
-			    $root = get_stylesheet_directory() . DS . 'resources';
+			    $path = get_stylesheet_directory() . DS . 'resources' . DS . 'shortcodes';
 		    }
-		    return $root . ( $path ? DS . $path : '' ) . ltrim( ( $file ? DS . $file : '' ), DS );
+		    return $path . ltrim( ( $file ? DS . $file : '' ), DS );
 			
 		}
 		
