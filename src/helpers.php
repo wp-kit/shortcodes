@@ -19,3 +19,18 @@
 	        return $factory->make($view, $data, $mergeData)->render();
 	    }
 	}
+	
+	if( ! function_exists( 'shortcodes_path' ) ) {
+		
+		function shortcodes_path( $file = '' ) {
+			
+		    if( function_exists('themosis_path') && ! empty( $GLOBALS['themosis.paths']['theme'] ) ) {
+			    $path = themosis_path('theme.shortcodes');
+		    } else {
+			    $path = get_stylesheet_directory() . DS . 'resources' . DS . 'shortcodes';
+		    }
+		    return $path . ltrim( ( $file ? DS . $file : '' ), DS );
+			
+		}
+		
+	}

@@ -12,7 +12,7 @@
 	    */
 	
 	    'shortcodes' => [
-	        App\Shortcodes\Test::class
+	        Theme\Shortcodes\Test::class
 	    ]
 	     
 	];

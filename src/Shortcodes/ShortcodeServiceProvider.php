@@ -16,6 +16,11 @@
 			$this->publishes([
 				__DIR__.'/../../config/shortcodes.config.php' => config_path('shortcodes.config.php')
 			], 'config');
+			
+			$this->publishes([
+				__DIR__.'/../../shortcodes/Test.php' => shortcodes_path('Test.php')
+			], 'shortcodes');
+			
 		}
 		
 	    public function startIntegration() {
