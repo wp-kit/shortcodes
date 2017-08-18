@@ -15,16 +15,14 @@
 	"require": {
         "php": ">=5.6.4",
         "wp-kit/integrations": "dev-master",
+	"wp-kit/utils": "dev-master",
         "illuminate/view": "5.*"
     },
 	"type": "library",
 	"autoload": {
         "psr-4": {
             "WPKit\\Shortcodes\\": "src/Shortcodes" 
-        },
-        "files": [
-            "src/helpers.php"
-        ]
+        }
     },
     "config": {
 		"preferred-install": "dist"
