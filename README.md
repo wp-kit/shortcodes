@@ -1,14 +1,14 @@
-# WPKit Shortcodes
+# wp-kit/shortcodes
 
 This is a Wordpress PHP Component that handles Shortcodes.
 
-This PHP Component was built to run within an Illuminate Container so is perfect for frameworks such as Themosis.
+This PHP Component was built to run within an ```Illuminate\Container\Container``` so is perfect for frameworks such as ```Themosis```.
 
 Often, Wordpress developers want an OOP approach to Shortcodes, this is exactly what this repo delivers.
 
 ## Installation
 
-If you're using Themosis, install via composer in the Themosis route folder, otherwise install in your theme folder:
+If you're using ```Themosis```, install via ```Composer``` in the root of your ```Themosis``` installation, otherwise install in your ```Composer``` driven theme folder:
 
 ```php
 composer require "wp-kit/shortcodes"
@@ -32,7 +32,7 @@ return [
 
 **Within functions.php**
 
-If you are just using this component standalone then add the following the functions.php
+If you are just using this component standalone then add the following the ```functions.php```
 
 ```php
 // within functions.php
@@ -56,7 +56,7 @@ $provider->register(); //register service provider
 
 ### Add PRS4 Class Reference (Themosis Only)
 
-Just add the following line to ```resources/config/loading.config.php``` in the themosis them folder:
+Just add the following line to ```resources/config/loading.config.php``` in the ```Themosis``` theme folder:
 
 ```php
 'Theme\\Shortcodes\\' => themosis_path('theme.resources').'shortcodes',
@@ -64,7 +64,7 @@ Just add the following line to ```resources/config/loading.config.php``` in the 
 
 ### Add Config & View File
 
-The recommended method of installing config files for WPKit Components is via ```wp-kit/vendor-publish``` command.
+The recommended method of installing config files for ```wp-kit``` components is via ```wp-kit/vendor-publish``` command.
 
 First, [install WP CLI](http://wp-cli.org/), and then install the package via:
 
@@ -102,4 +102,4 @@ PHP 5.6+
 
 ## License
 
-WPKit Shortcodes is open-sourced software licensed under the MIT License.
+wp-kit/shortcodes is open-sourced software licensed under the MIT License.
