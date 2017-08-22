@@ -29,13 +29,15 @@
 		
 	    public function startIntegration() {
 		    
-		    foreach( $this->app['config.factory']->get('shortcodes.shortcodes') as $tag => $shortcode ) {
+		    $config = $this->app['config.factory']->get('shortcodes');
+		    
+		    foreach( $config['shortcodes'] as $tag => $shortcode ) {
 			    
 			    $shortcode = new $shortcode;
 			    
-			    add_shortcode( $shortcode->tag, function($atts) use($shortcode) {
+			    add_shortcode( $tag, function($atts) use($shortcode) {
 		     
-			    	return $this->app->call( [$shortcode, 'render'], compact( 'atts' ) );
+			    	return $this->app->call( [$shortcode, 'render'] );
 			        
 			    } );
 			    
