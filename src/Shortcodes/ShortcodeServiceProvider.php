@@ -33,8 +33,6 @@
 		    
 		    foreach( $config['shortcodes'] as $tag => $shortcode ) {
 			    
-			    $shortcode = new $shortcode;
-			    
 			    add_shortcode( $tag, function($atts) use($shortcode) {
 		     
 			    	return $this->app->call( [$shortcode, 'render'] );
