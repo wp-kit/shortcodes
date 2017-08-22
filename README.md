@@ -2,13 +2,13 @@
 
 This is a Wordpress PHP Component that handles shortcodes.
 
-This PHP Component was built to run within an ```Illuminate\Container\Container``` so is perfect for frameworks such as ```Themosis```.
+This PHP Component was built to run within an [```Illuminate\Container\Container```](https://github.com/illuminate/container/blob/master/Container.php) so is perfect for frameworks such as [```Themosis```](http://framework.themosis.com/).
 
-Often, Wordpress developers want an ```OOP``` approach to shortcodes, this is exactly what this repo delivers.
+Often, Wordpress developers want an [```OOP```](https://en.wikipedia.org/wiki/Object-oriented_programming) approach to shortcodes, this is exactly what this repo delivers.
 
 ## Installation
 
-If you're using ```Themosis```, install via ```Composer``` in the root of your ```Themosis``` installation, otherwise install in your ```Composer``` driven theme folder:
+If you're using ```Themosis```, install via [```Composer```](https://getcomposer.org/) in the root of your ```Themosis``` installation, otherwise install in your ```Composer``` driven theme folder:
 
 ```php
 composer require "wp-kit/shortcodes"
