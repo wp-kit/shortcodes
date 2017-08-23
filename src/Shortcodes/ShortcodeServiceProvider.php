@@ -33,9 +33,11 @@
 		    
 		    foreach( $config['shortcodes'] as $tag => $shortcode ) {
 			    
-			    add_shortcode( $tag, function($atts) use($shortcode) {
+			    add_shortcode( $tag, function($atts, $content) use($shortcode) {
+				    
+				    $shortcode = $this->app->make($shortcode);
 		     
-			    	return $this->app->call( [$shortcode, 'render'] );
+			    	return $this->app->call( [$shortcode, 'render'], $atts, $content );
 			        
 			    } );
 			    

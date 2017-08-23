@@ -15,9 +15,8 @@
 	"require": {
         "php": ">=5.6.4",
         "wp-kit/integrations": "dev-master",
-	"wp-kit/utils": "dev-master",
-        "illuminate/view": "5.*",
-		"thunderer/shortcode": "^0.6.2"
+		"wp-kit/utils": "dev-master",
+        "illuminate/view": "5.*"
     },
 	"type": "library",
 	"autoload": {

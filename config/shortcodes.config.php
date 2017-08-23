@@ -12,7 +12,7 @@
 	    */
 	
 	    'shortcodes' => [
-	        Theme\Shortcodes\Test::class
+	       'test' =>  Theme\Shortcodes\Test::class
 	    ]
 	     
 	];

@@ -2,9 +2,7 @@
     
     namespace WPKit\Shortcodes;
 
-	use Thunder\Shortcode\Shortcode\Shortcode as ThunderShortcode;
-
-	class Shortcode extends ThunderShortcode {   	
+	class Shortcode {   	
 
         var $tag = '';
         var $atts = array();
