@@ -39,7 +39,7 @@
 				    
 				    $atts = is_array( $atts ) ? $atts : [];
 		     
-			    	return $this->app->call( [$shortcode, 'render'], $atts, $content );
+			    	return $this->app->call( [$shortcode, 'render'], compact('atts', 'content') );
 			        
 			    } );
 			    
