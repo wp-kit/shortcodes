@@ -36,6 +36,8 @@
 			    add_shortcode( $tag, function($atts, $content) use($shortcode) {
 				    
 				    $shortcode = $this->app->make($shortcode);
+				    
+				    $atts = is_array( $atts ) ? $atts : [];
 		     
 			    	return $this->app->call( [$shortcode, 'render'], $atts, $content );
 			        
