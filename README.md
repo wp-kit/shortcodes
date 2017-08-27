@@ -58,7 +58,7 @@ Alternatively, you can place the [config file(s)](config), [shortcode file(s)](s
 
 ```wp-kit\shortcodes``` comes with a class [```WPKit\Shortcodes\Shortcode```](src/Shortcodes/Shortcode.php) which can be extended by your own shortcode classes which should be added inside ```resources/shortcodes``` within the namespace ```Theme\Shortcodes```. 
 
-[Here is an example shortcode class](shortcodes/Test.php).
+[Here is an example Shortcode class](shortcodes/Test.php).
 
 ### Adding Views
 
