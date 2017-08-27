@@ -33,9 +33,9 @@
 		    
 		    foreach( $config['shortcodes'] as $tag => $shortcode ) {
 			    
-			    add_shortcode( $tag, function($atts, $content) use($shortcode) {
-				    
-				    $shortcode = $this->app->make($shortcode);
+			    $shortcode = $this->app->make($shortcode);
+			    
+			    add_shortcode( $shortcode->tag, function($atts, $content) use($shortcode) {
 				    
 				    $atts = is_array( $atts ) ? $atts : [];
 		     
