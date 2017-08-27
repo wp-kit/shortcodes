@@ -1,6 +1,6 @@
 {
 	"name": "wp-kit/shortcodes",
-	"description": "A Wordpress PHP Component that handles Shortcdoes",
+	"description": "A wp-kit component that handles shortcdoes",
 	"keywords": ["wordpress", "themosis", "oop", "shortcodes"],
 	"homepage" : "https://github.com/wp-kit/shortcodes",
 	"license": "MIT",
