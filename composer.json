@@ -1,7 +1,7 @@
 {
 	"name": "wp-kit/shortcodes",
 	"description": "A wp-kit component that handles shortcodes",
-	"keywords": ["wordpress", "themosis", "oop", "shortcodes"],
+	"keywords": ["wordpress", "themosis", "assely", "wp-kit", "oop", "shortcodes"],
 	"homepage" : "https://github.com/wp-kit/shortcodes",
 	"license": "MIT",
 	"authors": [
