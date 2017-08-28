@@ -7,10 +7,10 @@
 	class ShortcodeServiceProvider extends Integration {
 		
 		/**
-		* Boot the service provider
-		*
-		* @return void
-		*/
+		 * Boot the service provider.
+		 *
+		 * @return void
+		 */
 		public function boot() {
 			
 			$this->publishes([
@@ -27,6 +27,11 @@
 			
 		}
 		
+		/**
+		 * Start the integration.
+		 *
+		 * @return void
+		 */
 	    public function startIntegration() {
 		    
 		    $config = $this->app['config.factory']->get('shortcodes');
