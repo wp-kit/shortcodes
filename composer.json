@@ -14,8 +14,8 @@
 	],
 	"require": {
         "php": ">=5.6.4",
-        "wp-kit/integrations": "dev-master",
-		"wp-kit/utils": "dev-master",
+        "wp-kit/integrations": "2.*",
+		"wp-kit/utils": "2.*",
         "illuminate/view": "5.*"
     },
 	"type": "library",
@@ -23,12 +23,5 @@
         "psr-4": {
             "WPKit\\Shortcodes\\": "src/Shortcodes" 
         }
-    },
-    "config": {
-		"preferred-install": "dist"
-	},
-	"repositories": [
-	],
-	"scripts": {
-	}
+    }
 }
