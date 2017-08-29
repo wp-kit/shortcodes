@@ -34,6 +34,12 @@
 		 */
 	    public function startIntegration() {
 		    
+		    if( defined( 'WP_CLI' ) && WP_CLI ) {
+				
+				return false;
+				
+			}
+		    
 		    $config = $this->app['config.factory']->get('shortcodes');
 		    
 		    foreach( $config['shortcodes'] as $tag => $shortcode ) {
